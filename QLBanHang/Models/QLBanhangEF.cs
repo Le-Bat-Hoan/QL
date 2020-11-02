@@ -16,6 +16,7 @@ namespace QLBanHang.Models
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<LoaiSP> LoaiSPs { get; set; }
         public virtual DbSet<NhanVien> Nhanviens { get; set; }
+        public virtual DbSet<SanPham> Sanphams { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -34,5 +35,6 @@ namespace QLBanHang.Models
                 .WithOptional(e => e.Nhanvien)
                 .WillCascadeOnDelete();
         }
+
     }
 }

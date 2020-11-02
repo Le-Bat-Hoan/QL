@@ -128,7 +128,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CTHDsController.cs" />
+    <Compile Include="Controllers\GiohangController.cs" />
+    <Compile Include="Controllers\HoaDonsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KhachHangsController.cs" />
+    <Compile Include="Controllers\LoaiSPsController.cs" />
+    <Compile Include="Controllers\NhanViensController.cs" />
+    <Compile Include="Controllers\SanPhamsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -152,9 +159,35 @@
     <Compile Include="Migrations\202010271211434_Create_Table_SanPham.Designer.cs">
       <DependentUpon>202010271211434_Create_Table_SanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010280208299_Create_Table_SanPham1.cs" />
+    <Compile Include="Migrations\202010280208299_Create_Table_SanPham1.Designer.cs">
+      <DependentUpon>202010280208299_Create_Table_SanPham1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010280210520_Create_Table_KhachHang.cs" />
+    <Compile Include="Migrations\202010280210520_Create_Table_KhachHang.Designer.cs">
+      <DependentUpon>202010280210520_Create_Table_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010280214520_Create_Table_LoaiSP1.cs" />
+    <Compile Include="Migrations\202010280214520_Create_Table_LoaiSP1.Designer.cs">
+      <DependentUpon>202010280214520_Create_Table_LoaiSP1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010280216485_Create_Table_CTHD1.cs" />
+    <Compile Include="Migrations\202010280216485_Create_Table_CTHD1.Designer.cs">
+      <DependentUpon>202010280216485_Create_Table_CTHD1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010280217382_Create_Table_HoaDon1.cs" />
+    <Compile Include="Migrations\202010280217382_Create_Table_HoaDon1.Designer.cs">
+      <DependentUpon>202010280217382_Create_Table_HoaDon1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010280218335_Create_Table_NhanVien1.cs" />
+    <Compile Include="Migrations\202010280218335_Create_Table_NhanVien1.Designer.cs">
+      <DependentUpon>202010280218335_Create_Table_NhanVien1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\CTHD.cs" />
     <Compile Include="Models\HoaDon.cs" />
+    <Compile Include="Models\ImageHelper.cs" />
     <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\LoaiSP.cs" />
     <Compile Include="Models\NhanVien.cs" />
@@ -172,6 +205,33 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\7Up.jpg" />
+    <Content Include="Images\ball.jpg" />
+    <Content Include="Images\bia33thung.jpg" />
+    <Content Include="Images\biabenthanhchai.jpg" />
+    <Content Include="Images\biaheinekenchai.jpg" />
+    <Content Include="Images\biasaigonchai.jpg" />
+    <Content Include="Images\biasapporochai.jpg" />
+    <Content Include="Images\biatigerthung.jpg" />
+    <Content Include="Images\butchiden.jpg" />
+    <Content Include="Images\butlongkim.jpg" />
+    <Content Include="Images\butsap.jpg" />
+    <Content Include="Images\cassetsharp.jpg" />
+    <Content Include="Images\cassetsharp500w.jpg" />
+    <Content Include="Images\cocacolathung.jpg" />
+    <Content Include="Images\image.png" />
+    <Content Include="Images\pepsithung.jpg" />
+    <Content Include="Images\ruouchampagne.jpg" />
+    <Content Include="Images\ruouchatdo.jpg" />
+    <Content Include="Images\ruounapoleon.jpg" />
+    <Content Include="Images\ruounepgoden.jpg" />
+    <Content Include="Images\ruouoxo.jpg" />
+    <Content Include="Images\RuouVangNho.jpg" />
+    <Content Include="Images\ruouxuanthanh.jpg" />
+    <Content Include="Images\TeaPlus.jpg" />
+    <Content Include="Images\tivisharp.jpg" />
+    <Content Include="Images\tivisony.jpg" />
+    <Content Include="Images\tulanhsanyo.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -199,6 +259,37 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\LoaiSPs\Create.cshtml" />
+    <Content Include="Views\LoaiSPs\Delete.cshtml" />
+    <Content Include="Views\LoaiSPs\Details.cshtml" />
+    <Content Include="Views\LoaiSPs\Edit.cshtml" />
+    <Content Include="Views\LoaiSPs\Index.cshtml" />
+    <Content Include="Views\SanPhams\Create.cshtml" />
+    <Content Include="Views\SanPhams\Delete.cshtml" />
+    <Content Include="Views\SanPhams\Details.cshtml" />
+    <Content Include="Views\SanPhams\Edit.cshtml" />
+    <Content Include="Views\SanPhams\Index.cshtml" />
+    <Content Include="Views\KhachHangs\Create.cshtml" />
+    <Content Include="Views\KhachHangs\Delete.cshtml" />
+    <Content Include="Views\KhachHangs\Details.cshtml" />
+    <Content Include="Views\KhachHangs\Edit.cshtml" />
+    <Content Include="Views\KhachHangs\Index.cshtml" />
+    <Content Include="Views\NhanViens\Create.cshtml" />
+    <Content Include="Views\NhanViens\Delete.cshtml" />
+    <Content Include="Views\NhanViens\Details.cshtml" />
+    <Content Include="Views\NhanViens\Edit.cshtml" />
+    <Content Include="Views\NhanViens\Index.cshtml" />
+    <Content Include="Views\HoaDons\Create.cshtml" />
+    <Content Include="Views\HoaDons\Delete.cshtml" />
+    <Content Include="Views\HoaDons\Details.cshtml" />
+    <Content Include="Views\HoaDons\Edit.cshtml" />
+    <Content Include="Views\HoaDons\Index.cshtml" />
+    <Content Include="Views\CTHDs\Create.cshtml" />
+    <Content Include="Views\CTHDs\Delete.cshtml" />
+    <Content Include="Views\CTHDs\Details.cshtml" />
+    <Content Include="Views\CTHDs\Edit.cshtml" />
+    <Content Include="Views\CTHDs\Index.cshtml" />
+    <Content Include="Views\Giohang\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -231,6 +322,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010271211434_Create_Table_SanPham.resx">
       <DependentUpon>202010271211434_Create_Table_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010280208299_Create_Table_SanPham1.resx">
+      <DependentUpon>202010280208299_Create_Table_SanPham1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010280210520_Create_Table_KhachHang.resx">
+      <DependentUpon>202010280210520_Create_Table_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010280214520_Create_Table_LoaiSP1.resx">
+      <DependentUpon>202010280214520_Create_Table_LoaiSP1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010280216485_Create_Table_CTHD1.resx">
+      <DependentUpon>202010280216485_Create_Table_CTHD1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010280217382_Create_Table_HoaDon1.resx">
+      <DependentUpon>202010280217382_Create_Table_HoaDon1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010280218335_Create_Table_NhanVien1.resx">
+      <DependentUpon>202010280218335_Create_Table_NhanVien1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

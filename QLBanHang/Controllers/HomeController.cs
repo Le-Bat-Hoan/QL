@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
+using QLBanHang.Models;
 
 namespace QLBanHang.Controllers
 {
+   
     public class HomeController : Controller
     {
+        QLBanhangEF db = new QLBanhangEF();
         public ActionResult Index()
         {
-            return View();
+            var sanPhams = db.Sanphams.Include(S => S.LoaiSP);
+            return View(sanPhams.ToList());
         }
 
         public ActionResult About()
